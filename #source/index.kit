@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
     <title>СДВ Медика</title>
 </head>
 <body>
@@ -35,8 +36,12 @@
 
 
         <div class="main-info">
-            <div class="main-info__switch">О Докторе</div>
-            <div class="main-info__text">
+            <div class="main-info__flex-wrapper">
+                <div data-tab-target="#home" class="main-info__switch active tab">О Докторе</div>
+                <div data-tab-target="#pricing" class="main-info__switch mrgn30 tab">Образование</div>
+            </div>
+           
+            <div id="home" data-tab-content class="main-info__text active">
                 <p>Степанов Дмитрий Валерьевич: хирург, ортопед, травматолог. Стаж работы – 22 года.</p>
                 <ul>
                     <li>
@@ -54,11 +59,8 @@
                     </li>
                 </ul>
             </div>
-        </div>
 
-        <div class="main-info">
-            <div class="main-info__switch">Образование</div>
-            <div class="main-info__text">
+            <div id="pricing" data-tab-content class="main-info__text">
                 <p>Степанов Дмитрий Валерьевич: хирург, ортопед, травматолог. Стаж работы – 22 года.</p>
                 <ul>
                     <li>

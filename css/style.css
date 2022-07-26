@@ -381,6 +381,14 @@ body {
   margin-top: 50px;
   color: #777777;
 }
+.main-info__flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main-info .mrgn30 {
+  margin-left: 30px;
+}
 .main-info__switch {
   display: inline-block;
   text-transform: uppercase;
@@ -428,6 +436,14 @@ body {
   border-radius: 50%;
   left: 6px;
   top: 5px;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
 }
 
 @media (max-width: 1200px) {
@@ -478,5 +494,11 @@ body {
 
   .main-info {
     padding: 0 5vw;
+  }
+  .main-info__flex-wrapper {
+    display: block;
+  }
+  .main-info .mrgn30 {
+    margin: 20px 0;
   }
 }

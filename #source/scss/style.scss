@@ -52,6 +52,8 @@ body{
     padding: 0 15vw;
     margin-top: 50px;
     color: #777777;
+    &__flex-wrapper{ display: flex; }
+    .mrgn30{ margin-left: 30px;}
     &__switch{
         display: inline-block;
         text-transform: uppercase;
@@ -102,6 +104,10 @@ body{
     }
 }
 
+[data-tab-content] { display: none; }
+  
+.active[data-tab-content] { display: block; }
+
 @media (max-width:1200px){
     .header-wrapper__wrapper-text{ display: none; } 
     header{ padding-right: 30px;}
@@ -127,5 +133,11 @@ body{
          &__appoint{ width: 100%; }
          &__content{ align-items: center; .text{align-self: flex-start;}}
      }
-     .main-info{ padding: 0 5vw; }
+     .main-info{ 
+        padding: 0 5vw; 
+        &__flex-wrapper{ display: block; }
+        .mrgn30{ margin: 20px 0; }
+    }
  }
+
+
