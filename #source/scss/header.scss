@@ -1,12 +1,15 @@
 $green:#2CA900;
 
 header{
+    position: fixed;
     font-family: "Roboto-Bold";
     width: 100%;
     height: 5em;
     padding: 0 45px;
     border-bottom: 1px solid #BDBDBD;
     background-color: white;
+    z-index: 999;
+    box-shadow: 0px 5px 20px -15px #000000;
 }
 
 
@@ -64,5 +67,77 @@ header{
     }
     .burger{
         display: none;
+    }
+}
+
+.popup-menu{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+    transform: translate(-100%, 0px);
+
+    &__area{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__body{
+        color: black;
+        font-family: 'Garamond';
+        text-transform: uppercase;
+        height: inherit;
+        width: 300px;
+        background-color: white;
+        box-shadow: 5px 0px 16px -9px #000000;
+    }
+
+    &__content{
+        padding: 15px;
+        position: relative;
+    }
+
+    
+    &__close{
+        font-size: 3em;
+        position: absolute;
+        top: -7px;
+        right: 0;
+        transform: rotate(45deg);
+    }
+
+    &__heading{
+        font-size: 2em;
+        border-bottom: 2px solid black;
+        padding: 10px 30px 5px 0;
+    }
+
+    .list-menu{
+        .menu-ul{
+            margin-top:15px;
+
+            li{
+                border-left: 2px solid black;
+                padding-left: 10px;
+                font-size: 1.7em;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px,0px);
     }
 }

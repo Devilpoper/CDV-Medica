@@ -105,12 +105,16 @@ li a {
   font-style: normal;
 }
 header {
+  position: fixed;
   font-family: "Roboto-Bold";
   width: 100%;
   height: 5em;
   padding: 0 45px;
   border-bottom: 1px solid #BDBDBD;
   background-color: white;
+  z-index: 999;
+  -webkit-box-shadow: 0px 5px 20px -15px #000000;
+          box-shadow: 0px 5px 20px -15px #000000;
 }
 
 .header-wrapper {
@@ -182,6 +186,72 @@ header {
 }
 .header-wrapper .burger {
   display: none;
+}
+
+.popup-menu {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  -webkit-transform: translate(-100%, 0px);
+          transform: translate(-100%, 0px);
+}
+.popup-menu__area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.popup-menu__body {
+  color: black;
+  font-family: "Garamond";
+  text-transform: uppercase;
+  height: inherit;
+  width: 300px;
+  background-color: white;
+  -webkit-box-shadow: 5px 0px 16px -9px #000000;
+          box-shadow: 5px 0px 16px -9px #000000;
+}
+.popup-menu__content {
+  padding: 15px;
+  position: relative;
+}
+.popup-menu__close {
+  font-size: 3em;
+  position: absolute;
+  top: -7px;
+  right: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.popup-menu__heading {
+  font-size: 2em;
+  border-bottom: 2px solid black;
+  padding: 10px 30px 5px 0;
+}
+.popup-menu .list-menu .menu-ul {
+  margin-top: 15px;
+}
+.popup-menu .list-menu .menu-ul li {
+  border-left: 2px solid black;
+  padding-left: 10px;
+  font-size: 1.7em;
+  margin-bottom: 20px;
+}
+.popup-menu:target {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 .wave-btn {
@@ -319,6 +389,7 @@ body {
 }
 
 .container-img {
+  padding-top: 5em;
   height: 35rem;
   border-bottom: 1px solid #BDBDBD;
   background-image: url(../img/main/blur-wave.png);
@@ -400,17 +471,17 @@ body {
   cursor: pointer;
 }
 .main-info__switch::before {
-  content: "";
-  position: absolute;
-  width: 0%;
   height: 1.5px;
   background-color: #2CA900;
   left: 0;
-  bottom: -5px;
+  top: 27px;
+  width: 0;
   -webkit-transition: width 0.35s;
   transition: width 0.35s;
+  content: "";
+  position: absolute;
 }
-.main-info__switch:hover::before {
+.main-info__switch.active::before {
   width: 100%;
 }
 .main-info__text {
@@ -493,12 +564,18 @@ body {
   }
 
   .main-info {
+    margin: 10px 0;
     padding: 0 5vw;
   }
   .main-info__flex-wrapper {
     display: block;
   }
   .main-info .mrgn30 {
-    margin: 20px 0;
+    margin: 20px;
   }
+}
+.cont {
+  margin: 0 auto;
+  max-width: 600px;
+  font-size: 1.3em;
 }

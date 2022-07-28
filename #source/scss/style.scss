@@ -9,6 +9,7 @@ body{
 }
 
 .container-img{
+        padding-top: 5em;
         height: 35rem;
         border-bottom: 1px solid #BDBDBD;
         background-image: url(../img/main/blur-wave.png) ;
@@ -60,23 +61,25 @@ body{
         letter-spacing: 3px;
         font-size: 1.7em;
         color: $green;
-        
         position: relative;
         text-decoration: none;
         cursor: pointer;
+        
     }
     &__switch::before{
-        content: '';
-        position: absolute;
-        width: 0%;
         height: 1.5px;
         background-color: $green;
-        left: 0; bottom: -5px;
-        transition: width 0.35s; 
+        left: 0;
+        top: 27px;
+        width: 0;
+        transition: width 0.35s;
+        content: '';
+        position: absolute;
     }
-    &__switch:hover::before{
-        width: 100%; 
+    &__switch.active::before{
+        width: 100%;
     }
+    
     &__text{
         margin-top: 20px;
         padding-left: 10px;
@@ -134,10 +137,16 @@ body{
          &__content{ align-items: center; .text{align-self: flex-start;}}
      }
      .main-info{ 
+        margin: 10px 0;
         padding: 0 5vw; 
         &__flex-wrapper{ display: block; }
-        .mrgn30{ margin: 20px 0; }
+        .mrgn30{ margin: 20px; }
     }
  }
 
 
+.cont{
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 1.3em;;
+}
