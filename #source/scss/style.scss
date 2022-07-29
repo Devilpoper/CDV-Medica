@@ -2,6 +2,7 @@
 @import "fonts.scss";
 @import "header.scss";
 @import "button.scss";
+@import "footer.scss";
 $green:#2CA900;
 
 body{
@@ -81,7 +82,7 @@ body{
     }
     
     &__text{
-        margin-top: 20px;
+        margin-top: 40px;
         padding-left: 10px;
         font-size: large;
         max-width: 900px;
@@ -108,15 +109,93 @@ body{
 }
 
 [data-tab-content] { display: none; }
-  
 .active[data-tab-content] { display: block; }
+
+.service{
+    .heading{
+        text-align: center;
+        margin: 50px auto;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    &__grid-wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2.6vw;
+        
+    }
+    &__appoint{
+        width: auto;
+        border-radius: 10px;
+        box-shadow: -1px 2px 16px -9px #000000;
+        height: 100%;
+        display: grid;
+        grid-gap: 15px;
+    }
+    &__container{
+        align-self: flex-end;
+        padding: 0 20px 20px 20px;
+    }
+    &__image{
+        flex-basis: 200px;
+        img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+    &__heading{
+       padding: 0 15px;
+        font-size: 1.5em;
+        font-family: 'Roboto-Bold';
+        color: #313131;
+        text-align: center;
+    }
+    &__text{
+        
+        font-size: 1.2em;
+        color: #777777;
+        line-height: 20px;
+    }
+    &__btn{
+        justify-self: flex-end;
+        a{
+            width: 75%;
+        }
+        margin-top: 15px;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        display: flex;
+        justify-content: center;
+        flex-basis: 50%;
+    }
+    &__back-btn{
+        display: inline-block;
+        color: #ffffff;
+        background-color: $green;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 10px;
+    }
+}
+.content{
+    padding: 0 15vw;
+}
 
 @media (max-width:1200px){
     .header-wrapper__wrapper-text{ display: none; } 
     header{ padding-right: 30px;}
+    .service{
+        &__grid-wrapper{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
  }
  @media (max-width:992px){}
- @media (max-width:767px){
+ @media (max-width:770px){
+    .content{ padding: 0 5vw; }
      header{ padding: 0 15px; }
      .header-wrapper{
          &__navigation{ display: none; }
@@ -143,10 +222,14 @@ body{
         .mrgn30{ margin: 20px; }
     }
  }
+ @media (max-width:580px){
+    .service{
+        &__grid-wrapper{
+            display: block;
+        }
+        &__appoint{
+            margin-top: 50px;
+        }
+    }
+ }
 
-
-.cont{
-    margin: 0 auto;
-    max-width: 600px;
-    font-size: 1.3em;;
-}
