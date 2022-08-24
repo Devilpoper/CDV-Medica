@@ -9,13 +9,30 @@ body{
     font-family: 'Roboto';
 }
 
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f9f9fd;
+  }
+  
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $green;
+  }
+  
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: #f9f9fd;
+  }
+
 .container-img{
         padding-top: 5em;
-        height: 35rem;
+        height: 48rem;
         border-bottom: 1px solid #BDBDBD;
         background-image: url(../img/main/blur-wave.png) ;
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
         display: flex;
     &__appoint{
         width: 50%;
@@ -114,10 +131,10 @@ body{
 .service{
     .heading{
         text-align: center;
-        margin: 50px auto;
-        font-size: 2em;
         text-transform: uppercase;
-        letter-spacing: 3px;
+        font-size: 30px;
+        font-weight: 700;
+        margin: 90px 0 60px 0;
     }
     &__grid-wrapper{
         display: grid;
@@ -184,6 +201,85 @@ body{
     padding: 0 15vw;
 }
 
+.page-form{
+    margin-top:100px;
+    &__bgnd{ 
+        background-image: url(../img/main/family.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+}
+
+.form{
+    
+    max-width: 550px;
+    margin: 0 auto;
+    color: black;
+    padding: 90px 0;
+    &__title{
+        color: white;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+        margin: 0 0 30px 0;
+
+    }
+    &__item{
+        margin: 0 0 20px 0;
+    }
+    &__label{
+        color: white;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 10px;
+    }
+    &__input{
+        height: 50px;
+        padding: 0 20px;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 18px;
+        border: 1px solid white;
+        transition: all 0.5s ease 0s;
+    }
+    &__input:focus{
+        box-shadow: 0 0 15px rgb(8, 215, 46);
+    }
+    textarea.form__input{
+        min-height: 120px;
+        resize: vertical;
+        padding: 20px;
+    }
+    &__button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60px;
+        background-color: $green;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        border-radius: 20px;
+        box-shadow: 0 5px 0 #1f1f1f;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: background-color 0.3s ease 0s;
+        position: relative;
+        top: 0;
+    }
+    &__button:hover{
+        background-color: #1f7400;
+    }
+    &__button:active{
+        top: 3px;
+        box-shadow: 0 2px 0 #1f1f1f;
+    }
+}
+
 @media (max-width:1200px){
     .header-wrapper__wrapper-text{ display: none; } 
     header{ padding-right: 30px;}
@@ -196,7 +292,7 @@ body{
  @media (max-width:992px){}
  @media (max-width:770px){
     .content{ padding: 0 5vw; }
-     header{ padding: 0 15px; }
+     header{ height: 5em; padding: 0 15px; }
      .header-wrapper{
          &__navigation{ display: none; }
          .burger{ 
@@ -210,6 +306,7 @@ body{
          }
      }
      .container-img{
+        height: 35rem;
          display: block;
          &__photo{ display: none; }
          &__appoint{ width: 100%; }

@@ -4,7 +4,7 @@ header{
     position: fixed;
     font-family: "Roboto-Bold";
     width: 100%;
-    height: 5em;
+    height: 6em;
     padding: 0 45px;
     border-bottom: 1px solid #BDBDBD;
     background-color: white;
@@ -14,6 +14,7 @@ header{
 
 
 .header-wrapper{
+    height: inherit;
     display: flex;
     align-items: center;
     justify-content: space-between;
