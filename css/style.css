@@ -392,6 +392,10 @@ header {
   background-color: #353535;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto";
 }
@@ -668,6 +672,7 @@ body::-webkit-scrollbar-track {
 }
 .form__body {
   position: relative;
+  scroll-behavior: smooth;
 }
 .form__body::after {
   content: "";
@@ -837,6 +842,89 @@ body::-webkit-scrollbar-track {
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.145em;
+}
+
+.popup {
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+.popup__area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 10px;
+}
+.popup__content {
+  background-color: rgb(223, 223, 223);
+  max-width: 600px;
+  height: 100%;
+  padding: 15px 30px 10px 15px;
+  border-radius: 10px;
+  position: relative;
+  -webkit-transform: translate(0px, -100%);
+          transform: translate(0px, -100%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+.popup__close {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  font-size: 3em;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.popup__wrapper-contacts {
+  font-size: 1.4em;
+  padding: 27px 0 27px 15px;
+  max-width: 300px;
+  border-bottom: 2px solid black;
+}
+.popup__wrapper-contacts > div {
+  margin-bottom: 7px;
+}
+.popup__wrapper-contacts > div .bold {
+  font-family: "proxima-bold", serif;
+}
+.popup__adres-contacts {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  padding: 27px 15px 27px 15px;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup:target .popup__content {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 @media (max-width: 1200px) {

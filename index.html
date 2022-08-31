@@ -11,6 +11,7 @@
     <div class="wrapper">
 <header>
     <div class="header-wrapper">
+    <a href="index.html">
         <div class="header-wrapper__logo">
             <img class="header-wrapper__img-logo" src="img/header/logo.jpg" alt="логотип СДВ Медико">
             
@@ -19,11 +20,12 @@
                 <p class="second">Реабилитационный <br> центр</p>
             </div>
         </div>
+    </a>
 
         <nav class="header-wrapper__navigation">
             <ul>
                 <li>УСЛУГИ</li>
-                <li>КОНТАКТЫ</li>
+                <li><a href="#popup">КОНТАКТЫ</a></li>
                 <li>О НАС</li>
             </ul>
         </nav>
@@ -55,14 +57,36 @@
         </div>
     </div>
 </div>
-    <main>
+
+<div id="popup" class="popup">
+    <a href="#" class="popup__area"></a>
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#" class="popup__close">+</a>
+            <div class="heading"><h2>Свяжитесь с нами:</h2></div>
+            <div class="popup__wrapper-contacts">
+                <div><span class="bold">Контактный телефон:<br></span>  +7 931 394 60 33</div>
+                <div><span class="bold">E-mail:<br></span> rigveda.sbor@yandex.ru</div>
+            </div>
+
+            <div class="popup__adres-contacts">
+                <span class="bold">Адрес:</span>
+                <br>Россия<br> 188541<br>
+                Ленинградская область<br>
+                г. Сосновый Бор<br>
+                Красных Фортов, 20A<br>​​
+                Офис Н-117 <br>          
+            </div>
+        </div>
+    </div>
+</div>    <main>
         <div class="container-img">
             <div class="container-img__appoint">
                 <div class="container-img__border">
                     <div class="container-img__content">
                         <p class="heading">Степанов Дмитрий Валерьевич</p>
                         <p class="text">Хирург, ортопед, травмотолог. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut ex aliquid dolore beatae quia sint doloribus, dicta iure perspiciatis ratione sit qui, accusamus autem quod. Nobis laboriosam eveniet nesciunt consequatur.<br> Стаж работы 23 года.</p>
-                        <a href="" class="wave-btn">
+                        <a href="#form" class="wave-btn">
                             <span class="wave-btn__text">Записаться</span>
                             <span class="wave-btn__waves"></span>
                         </a>
