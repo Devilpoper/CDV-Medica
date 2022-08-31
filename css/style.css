@@ -438,6 +438,9 @@ body::-webkit-scrollbar-track {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .container-img__border {
   width: 36.75em;
@@ -471,6 +474,28 @@ body::-webkit-scrollbar-track {
   color: #838383;
   font-size: 1.2em;
   line-height: 25px;
+}
+.container-img__flex {
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
+}
+.container-img__image {
+  height: 90%;
+}
+.container-img__image img {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .main-info {
@@ -878,6 +903,9 @@ body::-webkit-scrollbar-track {
   .container-img__content .text {
     -ms-flex-item-align: start;
         align-self: flex-start;
+  }
+  .container-img__image {
+    display: none;
   }
 
   .main-info {

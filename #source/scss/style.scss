@@ -42,6 +42,7 @@ body::-webkit-scrollbar-track {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-grow: 1;
     }
     &__border{
         width: 36.75em;
@@ -64,6 +65,21 @@ body::-webkit-scrollbar-track {
             color: #838383;
             font-size: 1.2em;
             line-height: 25px;
+        }
+    }
+    &__flex{
+        flex-grow: 10;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        
+    }
+    &__image{
+        height: 90%;
+        img{
+            max-height: 100%;
+            max-width: 100%
         }
     }
 }
@@ -405,6 +421,7 @@ body::-webkit-scrollbar-track {
          &__photo{ display: none; }
          &__appoint{ width: 100%; }
          &__content{ align-items: center; .text{align-self: flex-start;}}
+         &__image{ display: none; } 
      }
      .main-info{ 
         margin: 10px 0;
